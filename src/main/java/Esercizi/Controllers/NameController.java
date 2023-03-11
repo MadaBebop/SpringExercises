@@ -1,4 +1,4 @@
-package Esercizi;
+package Esercizi.Controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,7 +14,7 @@ public class NameController {
     }
 
     @PostMapping(value = "/controller/{name}")
-    public String postName(@PathVariable String name) {
+    public String postName(@PathVariable String name) { //eseguo direttamente qui la logica (not recommended)
         StringBuilder sb = new StringBuilder(name);
         return sb.reverse().toString();
     }
